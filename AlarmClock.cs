@@ -9,5 +9,11 @@ namespace AlarmClock
         private DateTime _alarmTime;
         private DispatcherTimer _alarmTimer;
 
+        public int Duration { get; set; }
+
+        public AlarmClock()
+        {
+            
+        }
     }
 }
