@@ -13,7 +13,8 @@ namespace AlarmClock
 
         public AlarmClock()
         {
-            
+            _alarmTimer = new DispatcherTimer();
+            _alarmTimer.Interval = TimeSpan.FromMilliseconds(100);
         }
     }
 }
