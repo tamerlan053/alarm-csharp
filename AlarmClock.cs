@@ -20,6 +20,20 @@ namespace AlarmClock
             _alarmTime = DateTime.MaxValue;
         }
 
+        public DateTime AlarmTime {  
+            get {
+                return _alarmTime;
+            } 
+            set {
+                if (value <= DateTime.Now)
+                {
+                    value = value.AddDays(1);
+                }
+
+                _alarmTime = value; 
+            }
+        }
+
         private void AlarmTimer_Tick(object sender, EventArgs e)
         {
             SystemSounds.Beep.Play()
