@@ -34,11 +34,6 @@ namespace AlarmClock
             }
         }
 
-        private void AlarmTimer_Tick(object sender, EventArgs e)
-        {
-            SystemSounds.Beep.Play()
-        }
-
         public bool IsAlarmTimePassed()
         {
             bool value = DateTime.Now >= _alarmTime;
@@ -47,6 +42,21 @@ namespace AlarmClock
                 _alarmTimer.Start();
             }
             return value;
+        }
+
+        public bool ShouldStopBeeping()
+        {
+            bool value = DateTime.Now >= _alarmTime.AddSeconds(Duration);
+            if (value)
+            {
+                _alarmTimer.Stop();
+            }
+            return value;
+        }
+
+        private void AlarmTimer_Tick(object sender, EventArgs e)
+        {
+            SystemSounds.Beep.Play()
         }
     }
 }
