@@ -38,5 +38,15 @@ namespace AlarmClock
         {
             SystemSounds.Beep.Play()
         }
+
+        public bool IsAlarmTimePassed()
+        {
+            bool value = DateTime.Now >= _alarmTime;
+            if (value)
+            {
+                _alarmTimer.Start();
+            }
+            return value;
+        }
     }
 }
