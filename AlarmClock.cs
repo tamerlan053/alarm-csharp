@@ -22,6 +22,7 @@ namespace AlarmClock
 
         private void AlarmTimer_Tick(object sender, EventArgs e)
         {
+            SystemSounds.Beep.Play()
         }
     }
 }
