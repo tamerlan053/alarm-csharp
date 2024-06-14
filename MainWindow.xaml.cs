@@ -17,9 +17,13 @@ namespace AlarmClock
     public partial class MainWindow : Window
     {
         private AlarmClock _alarmClock;
+        private DispatcherTimer _clockTimer;
         public MainWindow()
         {
             InitializeComponent();
+            
+            _alarmClock = new AlarmClock();
+            _alarmClock.Duration = 10;
         }
     }
 }
