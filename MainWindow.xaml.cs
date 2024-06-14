@@ -16,6 +16,7 @@ namespace AlarmClock
     /// </summary>
     public partial class MainWindow : Window
     {
+        private AlarmClock _alarmClock;
         public MainWindow()
         {
             InitializeComponent();
