@@ -29,6 +29,8 @@ namespace AlarmClock
             _clockTimer.Interval = TimeSpan.FromSeconds(1); 
             _clockTimer.Tick += ClockTimer_Tick;
             _clockTimer.Start();
+
+            currentTimeLabel.Content = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }
