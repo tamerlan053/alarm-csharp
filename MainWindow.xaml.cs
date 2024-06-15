@@ -24,6 +24,11 @@ namespace AlarmClock
             
             _alarmClock = new AlarmClock();
             _alarmClock.Duration = 10;
+
+            _clockTimer = new DispatcherTimer();
+            _clockTimer.Interval = TimeSpan.FromSeconds(1); 
+            _clockTimer.Tick += ClockTimer_Tick;
+            _clockTimer.Start();
         }
     }
 }
