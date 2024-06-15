@@ -36,7 +36,8 @@ namespace AlarmClock
 
         private void ClockTimer_Tick(object sender, EventArgs e)
         {
-        
+            alarmTextBox.Text = "";
+            _alarmClock.Reset();
         }
     }
 }
