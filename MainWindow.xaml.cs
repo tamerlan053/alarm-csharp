@@ -18,6 +18,7 @@ namespace AlarmClock
     {
         private AlarmClock _alarmClock;
         private DispatcherTimer _clockTimer;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +32,11 @@ namespace AlarmClock
             _clockTimer.Start();
 
             currentTimeLabel.Content = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void ClockTimer_Tick(object sender, EventArgs e)
+        {
+        
         }
     }
 }
