@@ -47,11 +47,17 @@ namespace AlarmClock
                 }
             }
         }
-
-        
+   
         private void setButton_Click(object sender, RoutedEventArgs e)
         {
-        
+            if (DateTime.TryParse(alarmTextBox.Text, out DateTime alarmTime))
+            {
+                _alarmClock.AlarmTime = alarmTime;
+            }
+            else
+            {
+                MessageBox.Show("Invalid format");
+            }
         }
     }
 }
