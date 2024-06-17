@@ -47,5 +47,11 @@ namespace AlarmClock
                 }
             }
         }
+
+        
+        private void setButton_Click(object sender, RoutedEventArgs e)
+        {
+        
+        }
     }
 }
