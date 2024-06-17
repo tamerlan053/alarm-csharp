@@ -36,6 +36,8 @@ namespace AlarmClock
 
         private void ClockTimer_Tick(object sender, EventArgs e)
         {
+            currentTimeLabel.Content = DateTime.Now.ToString("HH:mm:ss");
+            
             alarmTextBox.Text = "";
             _alarmClock.Reset();
         }
